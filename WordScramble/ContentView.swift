@@ -22,6 +22,13 @@ struct ContentView: View {
             }
         }
     }
+    
+    func test(){
+        let input = "a b c"
+        let letters = input.components(separatedBy: " ")
+        let letter = letters.randomElement()
+        let trimmed = letter?.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
