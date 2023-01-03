@@ -14,6 +14,14 @@ struct ContentView: View {
             Text($0)
         }
     }
+    
+    func loadBundle(){
+        if let fileURL = Bundle.main.url(forResource: "some-file", withExtension: "txt") {
+            if let fileContents = try? String(contentsOf: fileURL) {
+                //we loaded the file
+            }
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
